@@ -1,0 +1,1 @@
+find . -type f -name "*.jpg" -newermt 2018-01-04 ! -newermt 2018-01-09 -printf '%s\n' | awk '{total=total+$1; n++}END{print "total: " total/1024 " kb"; print "avg: " (total/n)/1024 " kb"}'
